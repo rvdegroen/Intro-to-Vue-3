@@ -28,12 +28,12 @@
 						</ul>
 						<!-- when hovering a certain color, update the variant.image of the variant.color-->
 						<div
+							:style="{ backgroundColor: variant.color}"
+							class="color-circle"
 							v-for="variant in variants"
 							:key="variant.id"
 							@mouseover="updateImage(variant.image)"
-						>
-							{{ variant.color }}
-						</div>
+						></div>
 						<button class="button" @click="addToCart">Add to Cart</button>
 						<button class="button" @click="removeFromCart">Remove {{ product }}</button>
 					</div>
