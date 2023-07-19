@@ -1,4 +1,4 @@
-app.component('productDetails', {
+app.component('product-details', {
 	props: {
 		details: {
 			type: Array,
@@ -8,7 +8,9 @@ app.component('productDetails', {
 
 	template:
 		/*html*/
-		`<ul>
-    <li :details></li>
-  </ul>`,
+		`
+  <ul>
+    <li v-for="detail in details"> {{detail}} </li>
+  </ul>
+  `,
 });
