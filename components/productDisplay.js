@@ -1,4 +1,4 @@
-app.component('product-display', {
+app.component('productDisplay', {
 	// configure component
 	template:
 		// html product related template code
