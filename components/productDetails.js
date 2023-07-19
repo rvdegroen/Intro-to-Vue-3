@@ -1,3 +1,4 @@
+// solution
 app.component('product-details', {
 	props: {
 		details: {
@@ -5,12 +6,12 @@ app.component('product-details', {
 			required: true,
 		},
 	},
-
 	template:
 		/*html*/
 		`
   <ul>
-    <li v-for="detail in details"> {{detail}} </li>
+    <li v-for="detail in details">{{ detail }}</li>
   </ul>
   `,
 });
+// solution
