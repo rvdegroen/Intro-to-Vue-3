@@ -61,7 +61,7 @@ app.component('product-display', {
 			// emit the event "add-to-cart"
 			// whem the button is clicked, we want that event to happen
 			// we have to add a listener in index.html to the component
-			this.$emit('add-to-cart');
+			this.$emit('add-to-cart', this.variants[this.selectedVariant].id);
 		},
 		updateVariant(index) {
 			this.selectedVariant = index;

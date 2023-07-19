@@ -12,7 +12,8 @@
 		<div id="app">
 			<div class="nav-bar"></div>
 
-			<div class="cart">Cart({{ cart }})</div>
+			<!-- to show the number of items in the array, add .length -->
+			<div class="cart">Cart({{ cart.length }})</div>
 			<product-display :premium="premium" @add-to-cart="updateCart"></product-display>
 		</div>
 
