@@ -1,4 +1,10 @@
 app.component('productDisplay', {
+	props: {
+		premium: {
+			type: Boolean,
+			required: true,
+		},
+	},
 	// configure component
 	template:
 		// html product related template code
@@ -15,6 +21,9 @@ app.component('productDisplay', {
 
                     <p v-if="inStock">In Stock</p>
                     <p v-else>Out of Stock</p>
+
+                    <p> Shipping: {{ shipping }} </p>
+
                     <ul>
                         <li v-for="detail in details">{{ detail }}</li>
                     </ul>
@@ -61,6 +70,14 @@ app.component('productDisplay', {
 		},
 		inStock() {
 			return this.variants[this.selectedVariant].quantity;
+		},
+		shipping() {
+			// check if the user is premium (in data/main.js set to true or false)
+			if (this.premium) {
+				return 'Free';
+			}
+			// if set to false
+			return 2.99;
 		},
 	},
 });
