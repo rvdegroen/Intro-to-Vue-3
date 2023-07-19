@@ -1,5 +1,14 @@
 app.component('productDetails', {
 	props: {
-		details: {},
+		details: {
+            type:Array,
+            
+        },
+	},
+	template: {
+		/*html*/
+        `<ul>
+        <li> </li>
+        </ul>` 
 	},
 });
